@@ -19,5 +19,8 @@ def calculate(arguments: Calculator):
     if arguments.operation == "*":
         return {"Multiplication result": arguments.first_num * arguments.second_num}
     if arguments.operation == "/":
-        return {"Division result": arguments.first_num / arguments.second_num}
+        if arguments.second_num == 0:
+            return {"Can't divide by 0"}
+        else:
+            return {"Division result": arguments.first_num / arguments.second_num}
     return {"Error": "You used the wrong operator, expected: +, -, * or /"}
