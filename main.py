@@ -23,4 +23,4 @@ def calculate(arguments: Calculator):
             return {"Can't divide by 0"}
         else:
             return {"Division result": arguments.first_num / arguments.second_num}
-    return {"Error": "You used the wrong operator, expected: +, -, * or /"}
+    return {"You used the wrong operator, expected: +, -, * or /"}
